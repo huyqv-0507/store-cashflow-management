@@ -7,5 +7,4 @@ class LoginScreen extends StatelessWidget{
       child: Text("Login Screen"),
     );
   }
-
 }
