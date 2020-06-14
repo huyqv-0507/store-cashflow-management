@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "S0X/d66g1vDvQ9kpsgZfNvjJ037QtH5L7woH4Pywww3Sd0fv+yZDlL16B7fVF6H7n33jeStJNnj5JnJnSCCpHQ==",
+  "success": true,
+  "projectFilePath": "D:\\CN8\\SWD391\\store-cashflow\\backend\\store-cash-flow-management\\Services\\Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\huydn\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\huydn\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
