@@ -1,14 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "+AzHqkuR3hbirnY4GRs9rzCIRQpa78Bul9y7wI/2AHjo38sjRoTGRcLVDuZUX3gcgezcFviznLPDey/tFiVyww==",
+  "dgSpecHash": "PM5ApE7VEKQKLf7klnxYuDD+f2BTg2yJpm9H3KRghYGFTIRiFYwClkzLv4iTbFYNN27l7jc5gf1/sp6BPcv56A==",
   "success": true,
   "projectFilePath": "D:\\CN8\\SWD391\\store-cashflow\\backend\\store-cash-flow-management\\Data\\Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\huydn\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\huydn\\.nuget\\packages\\microsoft.entityframeworkcore\\2.2.6\\microsoft.entityframeworkcore.2.2.6.nupkg.sha512",
     "C:\\Users\\huydn\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\2.2.6\\microsoft.entityframeworkcore.abstractions.2.2.6.nupkg.sha512",
     "C:\\Users\\huydn\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\2.2.6\\microsoft.entityframeworkcore.analyzers.2.2.6.nupkg.sha512",
+    "C:\\Users\\huydn\\.nuget\\packages\\microsoft.entityframeworkcore.design\\2.2.6\\microsoft.entityframeworkcore.design.2.2.6.nupkg.sha512",
     "C:\\Users\\huydn\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\2.2.6\\microsoft.entityframeworkcore.relational.2.2.6.nupkg.sha512",
     "C:\\Users\\huydn\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\2.2.6\\microsoft.entityframeworkcore.sqlserver.2.2.6.nupkg.sha512",
+    "C:\\Users\\huydn\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\2.2.6\\microsoft.entityframeworkcore.tools.2.2.6.nupkg.sha512",
     "C:\\Users\\huydn\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\2.2.0\\microsoft.extensions.caching.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\huydn\\.nuget\\packages\\microsoft.extensions.caching.memory\\2.2.0\\microsoft.extensions.caching.memory.2.2.0.nupkg.sha512",
     "C:\\Users\\huydn\\.nuget\\packages\\microsoft.extensions.configuration\\2.2.0\\microsoft.extensions.configuration.2.2.0.nupkg.sha512",

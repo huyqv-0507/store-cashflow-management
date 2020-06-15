@@ -6,6 +6,8 @@ using Data.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Internal;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using store_cash_flow_management.DIConfigs;
@@ -23,6 +25,7 @@ namespace store_cash_flow_management
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_2);
             services.AddDbContext<CashManageStoreContext>();
             DIRepos.Configure(services);
             DIServices.Configure(services);
@@ -35,11 +38,11 @@ namespace store_cash_flow_management
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.Run(async (context) =>
+            else
             {
-                await context.Response.WriteAsync("Hello World!");
-            });
+                app.UseHsts();
+            }
+            app.UseMvc();
         }
     }
 }

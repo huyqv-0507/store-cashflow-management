@@ -42,6 +42,12 @@
               "target": "Package",
               "version": "[2.2.6, )"
             },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -85,7 +91,11 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\CN8\\SWD391\\store-cashflow\\backend\\store-cash-flow-management\\Data\\Data.csproj": {
+                "projectPath": "D:\\CN8\\SWD391\\store-cashflow\\backend\\store-cash-flow-management\\Data\\Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -167,6 +177,10 @@
             },
             "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.StaticFiles": {
               "target": "Package",
               "version": "[2.2.0, )"
             },

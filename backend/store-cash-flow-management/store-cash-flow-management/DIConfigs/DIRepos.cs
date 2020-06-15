@@ -1,6 +1,7 @@
 ﻿using Data.Infrastructures;
 using Data.Infrastructures.IRepositories;
 using Data.Infrastructures.Repositories;
+using Data.Models;
 using Microsoft.AspNetCore.Hosting.Internal;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -14,8 +15,10 @@ namespace store_cash_flow_management.DIConfigs
     {
         public static void Configure(IServiceCollection services)
         {
+            services.AddScoped<IDbFactory, DbFactory>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
         }
     }
 }

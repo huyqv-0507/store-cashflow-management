@@ -16,12 +16,9 @@ namespace Data.Models
         }
 
         public virtual DbSet<Account> Account { get; set; }
-        public virtual DbSet<CashAccount> CashAccount { get; set; }
         public virtual DbSet<CashTransaction> CashTransaction { get; set; }
         public virtual DbSet<CashType> CashType { get; set; }
         public virtual DbSet<Invoice> Invoice { get; set; }
-        public virtual DbSet<Order> Order { get; set; }
-        public virtual DbSet<Payment> Payment { get; set; }
         public virtual DbSet<Register> Register { get; set; }
         public virtual DbSet<RegisterCashTransaction> RegisterCashTransaction { get; set; }
         public virtual DbSet<Role> Role { get; set; }
@@ -70,20 +67,6 @@ namespace Data.Models
                     .HasConstraintName("FK_Account_Role");
             });
 
-            modelBuilder.Entity<CashAccount>(entity =>
-            {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
-                entity.Property(e => e.Time).HasColumnType("date");
-
-                entity.Property(e => e.TotalCashIncome).HasColumnType("decimal(18, 0)");
-
-                entity.HasOne(d => d.IdStoreNavigation)
-                    .WithMany(p => p.CashAccount)
-                    .HasForeignKey(d => d.IdStore)
-                    .HasConstraintName("FK_CashAccount_Store");
-            });
-
             modelBuilder.Entity<CashTransaction>(entity =>
             {
                 entity.Property(e => e.Id).ValueGeneratedNever();
@@ -126,22 +109,6 @@ namespace Data.Models
                     .WithMany(p => p.Invoice)
                     .HasForeignKey(d => d.CashTransactionId)
                     .HasConstraintName("FK_Invoice_CashTransaction");
-            });
-
-            modelBuilder.Entity<Order>(entity =>
-            {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
-                entity.Property(e => e.Cash).HasColumnType("decimal(18, 0)");
-
-                entity.Property(e => e.TimeCreated).HasColumnType("datetime");
-            });
-
-            modelBuilder.Entity<Payment>(entity =>
-            {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
-                entity.Property(e => e.Name).HasMaxLength(50);
             });
 
             modelBuilder.Entity<Register>(entity =>

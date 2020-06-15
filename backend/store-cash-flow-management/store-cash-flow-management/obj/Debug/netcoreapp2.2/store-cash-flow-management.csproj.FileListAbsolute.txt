@@ -9,7 +9,6 @@ D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-
 D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-management\obj\Debug\netcoreapp2.2\store-cash-flow-management.csprojAssemblyReference.cache
 D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-management\obj\Debug\netcoreapp2.2\store-cash-flow-management.AssemblyInfoInputs.cache
 D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-management\obj\Debug\netcoreapp2.2\store-cash-flow-management.AssemblyInfo.cs
-D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-management\obj\Debug\netcoreapp2.2\store-cash-flow-management.csproj.CoreCompileInputs.cache
 D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-management\obj\Debug\netcoreapp2.2\store-cash-flow-management.RazorAssemblyInfo.cache
 D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-management\obj\Debug\netcoreapp2.2\store-cash-flow-management.RazorAssemblyInfo.cs
 D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-management\obj\Debug\netcoreapp2.2\store-cash-flow-management.RazorTargetAssemblyInfo.cache
@@ -19,3 +18,6 @@ D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-
 D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-management\bin\Debug\netcoreapp2.2\Data.dll
 D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-management\bin\Debug\netcoreapp2.2\Data.pdb
 D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-management\obj\Debug\netcoreapp2.2\store-cash-flow-management.csproj.CopyComplete
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-management\bin\Debug\netcoreapp2.2\Services.dll
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-management\bin\Debug\netcoreapp2.2\Services.pdb
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\store-cash-flow-management\obj\Debug\netcoreapp2.2\store-cash-flow-management.csproj.CoreCompileInputs.cache

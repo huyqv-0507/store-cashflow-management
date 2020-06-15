@@ -13,6 +13,7 @@ namespace store_cash_flow_management.DIConfigs
         public static void Configure(IServiceCollection services)
         {
             services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IRoleService, RoleService>();
         }
     }
 }
