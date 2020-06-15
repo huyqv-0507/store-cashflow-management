@@ -1,0 +1,12 @@
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Services\bin\Release\netstandard2.0\Services.deps.json
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Services\bin\Release\netstandard2.0\Services.dll
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Services\bin\Release\netstandard2.0\Services.pdb
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Services\bin\Release\netstandard2.0\Data.dll
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Services\bin\Release\netstandard2.0\Data.pdb
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Services\obj\Release\netstandard2.0\Services.csprojAssemblyReference.cache
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Services\obj\Release\netstandard2.0\Services.AssemblyInfoInputs.cache
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Services\obj\Release\netstandard2.0\Services.AssemblyInfo.cs
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Services\obj\Release\netstandard2.0\Services.csproj.CoreCompileInputs.cache
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Services\obj\Release\netstandard2.0\Services.csproj.CopyComplete
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Services\obj\Release\netstandard2.0\Services.dll
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Services\obj\Release\netstandard2.0\Services.pdb

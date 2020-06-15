@@ -1,0 +1,9 @@
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Data\bin\Release\netstandard2.0\Data.deps.json
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Data\bin\Release\netstandard2.0\Data.dll
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Data\bin\Release\netstandard2.0\Data.pdb
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Data\obj\Release\netstandard2.0\Data.csprojAssemblyReference.cache
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Data\obj\Release\netstandard2.0\Data.AssemblyInfoInputs.cache
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Data\obj\Release\netstandard2.0\Data.AssemblyInfo.cs
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Data\obj\Release\netstandard2.0\Data.csproj.CoreCompileInputs.cache
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Data\obj\Release\netstandard2.0\Data.dll
+D:\CN8\SWD391\store-cashflow\backend\store-cash-flow-management\Data\obj\Release\netstandard2.0\Data.pdb
