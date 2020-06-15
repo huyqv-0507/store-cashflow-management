@@ -7,7 +7,6 @@ namespace Data.Models
     {
         public Store()
         {
-            CashAccount = new HashSet<CashAccount>();
             Register = new HashSet<Register>();
             StoreCash = new HashSet<StoreCash>();
             StoreEmployee = new HashSet<StoreEmployee>();
@@ -18,7 +17,6 @@ namespace Data.Models
         public string Address { get; set; }
         public DateTime? TimeCreated { get; set; }
 
-        public virtual ICollection<CashAccount> CashAccount { get; set; }
         public virtual ICollection<Register> Register { get; set; }
         public virtual ICollection<StoreCash> StoreCash { get; set; }
         public virtual ICollection<StoreEmployee> StoreEmployee { get; set; }

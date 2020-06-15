@@ -4451,6 +4451,19 @@
         "runtime": {
           "bin/placeholder/Data.dll": {}
         }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
+        }
       }
     }
   },
@@ -12165,6 +12178,11 @@
       "type": "project",
       "path": "../Data/Data.csproj",
       "msbuildProject": "../Data/Data.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12172,7 +12190,9 @@
       "Data >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.AspNetCore.StaticFiles >= 2.2.0",
+      "Microsoft.NETCore.App >= 2.2.0",
+      "Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12203,6 +12223,9 @@
           "projectReferences": {
             "D:\\CN8\\SWD391\\store-cashflow\\backend\\store-cash-flow-management\\Data\\Data.csproj": {
               "projectPath": "D:\\CN8\\SWD391\\store-cashflow\\backend\\store-cash-flow-management\\Data\\Data.csproj"
+            },
+            "D:\\CN8\\SWD391\\store-cashflow\\backend\\store-cash-flow-management\\Services\\Services.csproj": {
+              "projectPath": "D:\\CN8\\SWD391\\store-cashflow\\backend\\store-cash-flow-management\\Services\\Services.csproj"
             }
           }
         }
@@ -12224,6 +12247,10 @@
           },
           "Microsoft.AspNetCore.Razor.Design": {
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
+          "Microsoft.AspNetCore.StaticFiles": {
             "target": "Package",
             "version": "[2.2.0, )"
           },
