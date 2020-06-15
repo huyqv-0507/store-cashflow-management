@@ -9,7 +9,7 @@ namespace store_cash_flow_management.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Account : ControllerBase
+    public class AccountController : ControllerBase
     {
     }
 }
