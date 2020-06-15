@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using store_cash_flow_management.DIConfigs;
 
 namespace store_cash_flow_management
 {
@@ -23,6 +24,8 @@ namespace store_cash_flow_management
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<CashManageStoreContext>();
+            DIRepos.Configure(services);
+            DIServices.Configure(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
