@@ -195,6 +195,9 @@ namespace Data.Migrations
                     b.Property<string>("Name")
                         .HasMaxLength(50);
 
+                    b.Property<string>("Phone")
+                        .HasMaxLength(50);
+
                     b.Property<DateTime?>("TimeCreated")
                         .HasColumnType("datetime");
 
@@ -237,11 +240,13 @@ namespace Data.Migrations
 
                     b.Property<int?>("IdStore");
 
+                    b.Property<int?>("StoreId");
+
                     b.HasKey("Id");
 
                     b.HasIndex("IdAccount");
 
-                    b.HasIndex("IdStore");
+                    b.HasIndex("StoreId");
 
                     b.ToTable("StoreEmployee");
                 });
@@ -331,10 +336,9 @@ namespace Data.Migrations
                         .HasForeignKey("IdAccount")
                         .HasConstraintName("FK_StoreEmployee_Account");
 
-                    b.HasOne("Data.Models.Store", "IdStoreNavigation")
+                    b.HasOne("Data.Models.Store")
                         .WithMany("StoreEmployee")
-                        .HasForeignKey("IdStore")
-                        .HasConstraintName("FK_StoreEmployee_Store");
+                        .HasForeignKey("StoreId");
                 });
 #pragma warning restore 612, 618
         }

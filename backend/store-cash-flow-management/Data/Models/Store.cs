@@ -17,6 +17,9 @@ namespace Data.Models
         public string Address { get; set; }
         public DateTime? TimeCreated { get; set; }
 
+        public string Phone { get; set; }
+
+
         public virtual ICollection<Register> Register { get; set; }
         public virtual ICollection<StoreCash> StoreCash { get; set; }
         public virtual ICollection<StoreEmployee> StoreEmployee { get; set; }

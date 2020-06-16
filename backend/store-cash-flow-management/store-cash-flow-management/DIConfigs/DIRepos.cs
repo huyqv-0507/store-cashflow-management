@@ -19,6 +19,7 @@ namespace store_cash_flow_management.DIConfigs
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IStoreRepository, StoreRepository>();
         }
     }
 }

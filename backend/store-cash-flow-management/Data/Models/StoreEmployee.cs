@@ -11,6 +11,5 @@ namespace Data.Models
         public DateTime? CreatedTime { get; set; }
 
         public virtual Account IdAccountNavigation { get; set; }
-        public virtual Store IdStoreNavigation { get; set; }
     }
 }

@@ -1,0 +1,10 @@
+F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\bin\Debug\netcoreapp2.2\Data.deps.json
+F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\bin\Debug\netcoreapp2.2\Data.runtimeconfig.json
+F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\bin\Debug\netcoreapp2.2\Data.runtimeconfig.dev.json
+F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\bin\Debug\netcoreapp2.2\Data.dll
+F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\bin\Debug\netcoreapp2.2\Data.pdb
+F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\obj\Debug\netcoreapp2.2\Data.csproj.CoreCompileInputs.cache
+F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\obj\Debug\netcoreapp2.2\Data.AssemblyInfoInputs.cache
+F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\obj\Debug\netcoreapp2.2\Data.AssemblyInfo.cs
+F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\obj\Debug\netcoreapp2.2\Data.dll
+F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\obj\Debug\netcoreapp2.2\Data.pdb

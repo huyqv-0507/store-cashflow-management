@@ -33,7 +33,7 @@ namespace Data.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=CashManageStore;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=CashManagementStore;Trusted_Connection=True;");
             }
         }
 
@@ -172,6 +172,8 @@ namespace Data.Models
 
                 entity.Property(e => e.Name).HasMaxLength(50);
 
+                entity.Property(e => e.Phone).HasMaxLength(50);
+
                 entity.Property(e => e.TimeCreated).HasColumnType("datetime");
             });
 
@@ -204,11 +206,7 @@ namespace Data.Models
                     .WithMany(p => p.StoreEmployee)
                     .HasForeignKey(d => d.IdAccount)
                     .HasConstraintName("FK_StoreEmployee_Account");
-
-                entity.HasOne(d => d.IdStoreNavigation)
-                    .WithMany(p => p.StoreEmployee)
-                    .HasForeignKey(d => d.IdStore)
-                    .HasConstraintName("FK_StoreEmployee_Store");
+            
             });
 
             modelBuilder.Entity<TransactionType>(entity =>
