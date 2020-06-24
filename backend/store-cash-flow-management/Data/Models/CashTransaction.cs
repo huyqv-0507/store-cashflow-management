@@ -15,6 +15,7 @@ namespace Data.Models
         public DateTime? CreatedTime { get; set; }
         public int? TransactionTypeId { get; set; }
         public long? RegisterCashTransactionId { get; set; }
+        public string Description { get; set; }
 
         public virtual RegisterCashTransaction RegisterCashTransaction { get; set; }
         public virtual TransactionType TransactionType { get; set; }

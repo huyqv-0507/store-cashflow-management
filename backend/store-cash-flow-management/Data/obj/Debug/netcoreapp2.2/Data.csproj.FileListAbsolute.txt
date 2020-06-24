@@ -8,3 +8,4 @@ F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\obj
 F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\obj\Debug\netcoreapp2.2\Data.AssemblyInfo.cs
 F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\obj\Debug\netcoreapp2.2\Data.dll
 F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\obj\Debug\netcoreapp2.2\Data.pdb
+F:\CN8\SWD\store-cashflow-management\backend\store-cash-flow-management\Data\obj\Debug\netcoreapp2.2\Data.csprojAssemblyReference.cache

@@ -15,6 +15,7 @@ namespace store_cash_flow_management.DIConfigs
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IStoreService, StoreService>();
+            services.AddScoped<ICashTransactionService, CashTransactionService>();
         }
     }
 }

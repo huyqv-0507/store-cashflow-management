@@ -1,4 +1,5 @@
-﻿using Data.Models;
+﻿using Data.EditModel;
+using Data.Models;
 using PagedList.Core;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,8 @@ namespace Services.IServices
         IQueryable<Store> getStores();
         Store getStoreById(int id);
 
-        IPagedList<Store> getStoreByPage(int? page, int? pageSize);
-
-    }
+        bool createStore(StoreUpdateModel store);
+        bool updateStore(StoreUpdateModel store);
+        bool deleteStore(int id);
+    }   
 }

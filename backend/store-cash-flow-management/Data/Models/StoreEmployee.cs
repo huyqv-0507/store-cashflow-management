@@ -9,7 +9,9 @@ namespace Data.Models
         public int? IdStore { get; set; }
         public long? IdAccount { get; set; }
         public DateTime? CreatedTime { get; set; }
+        public int? StoreId { get; set; }
 
         public virtual Account IdAccountNavigation { get; set; }
+        public virtual Store Store { get; set; }
     }
 }

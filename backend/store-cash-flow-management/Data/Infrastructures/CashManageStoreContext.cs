@@ -33,7 +33,7 @@ namespace Data.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=CashManagementStore;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=PHUHDLAPTOP\\SQLEXPRESS;Database=CashManagementStore;Trusted_Connection=True;");
             }
         }
 
@@ -43,7 +43,7 @@ namespace Data.Models
 
             modelBuilder.Entity<Account>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.HasIndex(e => e.IdRole);
 
                 entity.Property(e => e.Name).HasMaxLength(50);
 
@@ -69,11 +69,15 @@ namespace Data.Models
 
             modelBuilder.Entity<CashTransaction>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.HasIndex(e => e.RegisterCashTransactionId);
+
+                entity.HasIndex(e => e.TransactionTypeId);
 
                 entity.Property(e => e.Cash).HasColumnType("decimal(18, 0)");
 
                 entity.Property(e => e.CreatedTime).HasColumnType("datetime");
+
+                entity.Property(e => e.Description).HasMaxLength(50);
 
                 entity.HasOne(d => d.RegisterCashTransaction)
                     .WithMany(p => p.CashTransaction)
@@ -88,8 +92,6 @@ namespace Data.Models
 
             modelBuilder.Entity<CashType>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description).HasMaxLength(50);
 
                 entity.Property(e => e.Name).HasMaxLength(50);
@@ -97,13 +99,13 @@ namespace Data.Models
 
             modelBuilder.Entity<Invoice>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.HasIndex(e => e.CashTransactionId);
 
-                entity.Property(e => e.Cash).HasMaxLength(10);
+                entity.Property(e => e.Cash).HasColumnType("decimal(18, 0)");
 
-                entity.Property(e => e.CreateTime).HasMaxLength(10);
+                entity.Property(e => e.CreateTime).HasColumnType("datetime");
 
-                entity.Property(e => e.Name).HasMaxLength(10);
+                entity.Property(e => e.Name).HasMaxLength(50);
 
                 entity.HasOne(d => d.CashTransaction)
                     .WithMany(p => p.Invoice)
@@ -113,7 +115,7 @@ namespace Data.Models
 
             modelBuilder.Entity<Register>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.HasIndex(e => e.StoreId);
 
                 entity.Property(e => e.Name).HasMaxLength(50);
 
@@ -129,7 +131,9 @@ namespace Data.Models
 
             modelBuilder.Entity<RegisterCashTransaction>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.HasIndex(e => e.RegisterId);
+
+                entity.HasIndex(e => e.ShiftId);
 
                 entity.Property(e => e.CreatedTime).HasColumnType("datetime");
 
@@ -150,8 +154,6 @@ namespace Data.Models
 
             modelBuilder.Entity<Role>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Role1)
                     .HasColumnName("Role")
                     .HasMaxLength(50);
@@ -159,15 +161,15 @@ namespace Data.Models
 
             modelBuilder.Entity<Shift>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.Description).HasMaxLength(50);
 
-                entity.Property(e => e.Description).HasMaxLength(10);
+                entity.Property(e => e.Name).HasMaxLength(50);
+
+                entity.Property(e => e.Time).HasMaxLength(50);
             });
 
             modelBuilder.Entity<Store>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Address).HasMaxLength(150);
 
                 entity.Property(e => e.Name).HasMaxLength(50);
@@ -179,7 +181,9 @@ namespace Data.Models
 
             modelBuilder.Entity<StoreCash>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.HasIndex(e => e.CashTypeId);
+
+                entity.HasIndex(e => e.StoreId);
 
                 entity.Property(e => e.CashAccount).HasColumnType("decimal(10, 0)");
 
@@ -198,7 +202,9 @@ namespace Data.Models
 
             modelBuilder.Entity<StoreEmployee>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.HasIndex(e => e.IdAccount);
+
+                entity.HasIndex(e => e.StoreId);
 
                 entity.Property(e => e.CreatedTime).HasColumnType("datetime");
 
@@ -206,13 +212,14 @@ namespace Data.Models
                     .WithMany(p => p.StoreEmployee)
                     .HasForeignKey(d => d.IdAccount)
                     .HasConstraintName("FK_StoreEmployee_Account");
-            
+
+                entity.HasOne(d => d.Store)
+                    .WithMany(p => p.StoreEmployee)
+                    .HasForeignKey(d => d.StoreId);
             });
 
             modelBuilder.Entity<TransactionType>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description).HasMaxLength(50);
 
                 entity.Property(e => e.Name).HasMaxLength(50);
