@@ -10,7 +10,7 @@ namespace Data.Infrastructures
         void Add(T entity);
         void Update(T entity);
         void Delete(T entity);
-        T GetById(int id);
+        T GetById(object id);
         IQueryable<T> GetAll();
         List<T> GetPaged(int page, int pageSize);
     }

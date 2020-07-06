@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data.EditModel
+namespace Data.RequestModel
 {
     public class StoreUpdateModel
     {

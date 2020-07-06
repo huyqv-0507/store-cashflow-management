@@ -10,7 +10,7 @@ using Services.IServices;
 
 namespace store_cash_flow_management.Controllers
 {
-    [Authorize]
+
     [Route("api/[controller]")]
     [ApiController]
     public class AccountsController : ControllerBase
@@ -22,7 +22,7 @@ namespace store_cash_flow_management.Controllers
             _service = service;
         }
         [AllowAnonymous]
-        [HttpPost]
+        [HttpGet]
         public IActionResult loginAccount(AccountLoginModel model)
         {
             var token = _service.loginAccount(model);
@@ -30,7 +30,47 @@ namespace store_cash_flow_management.Controllers
             {
                 return Ok(token);
             }
-            return Content("Tài khoản hoặc mật khẩu sai");
+            return Unauthorized();
+        }
+
+        [HttpPost]
+        public IActionResult createAccount(bool isAdmin, CreateAccountModel account)
+        {
+            if (isAdmin)
+            {
+                if (_service.createAccount(account))
+                {
+                    return Ok("Tạo tài khoản thành công");
+                }
+            }
+            else
+            {
+                return Content("Bạn không phải admin");
+            }
+
+
+            return Content("Tạo tài khoản thất bại ");
+        }
+
+        [HttpDelete]
+        public IActionResult deleteAccount(bool isAdmin, long idAccount)
+        {
+            if (isAdmin)
+            {
+                if (_service.deleteAccount(idAccount)) return Ok("Delete thành công");
+                else return Content("Delete Thất bại");
+            }
+            return NoContent();
+        }
+
+        [HttpPut]
+        public IActionResult updateAccount(bool isAdmin,long idAccount,AccountUpdateModel account)
+        {
+            if (isAdmin)
+            {
+                if (_service.updateAccount(idAccount,account)) return Ok();
+            }
+            return NotFound();
         }
     }
 }

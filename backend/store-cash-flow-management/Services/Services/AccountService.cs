@@ -2,6 +2,7 @@
 using Data.Infrastructures.IRepositories;
 using Data.Models;
 using Data.RequestModel;
+using Data.ResponeModel;
 using Microsoft.IdentityModel.Tokens;
 using Services.IServices;
 using System;
@@ -24,7 +25,46 @@ namespace Services.Services
             _unitOfWork = unitOfWork;
         }
 
-        public string loginAccount(AccountLoginModel account)
+        public bool createAccount(CreateAccountModel account)
+        {
+            if(account != null)
+            {
+                var check =_repo.GetAll().SingleOrDefault(x => x.Username == account.Usernanme);
+                if (check !=null)
+                {
+                    var tmp = new Account();
+                    tmp.IdRole = account.IdRole;
+                    tmp.Username = account.Usernanme;
+                    tmp.Password = account.Password;
+                    tmp.Name = account.Name;
+                    tmp.Status = "active";
+                    tmp.TimeCreated = DateTime.Today;
+
+                    _repo.Add(tmp);
+                    _unitOfWork.Commit();
+                    return true;
+                }                       
+            }
+            return false;
+        }
+
+        public bool deleteAccount(long idAccount)
+        {
+            if(idAccount != null && idAccount > 0)
+            {
+                var account = _repo.GetById(idAccount);
+                if(account != null)
+                {
+                    _repo.Delete(account);
+                    _unitOfWork.Commit();
+                    return true;
+                }
+                
+            }
+            return false;
+        }
+
+        public LoginResponeModel loginAccount(AccountLoginModel account)
         {
             if(account != null)
             {
@@ -32,11 +72,44 @@ namespace Services.Services
                 if(tmp != null)
                 {
                     var token = this.generateJwtToken(tmp);
-                    return token;
+                    LoginResponeModel result = new LoginResponeModel();
+                    result.Token = token;
+                    result.Name = tmp.Name;
+                    result.RoleID = tmp.IdRole;
+                    return result;
                 }
             }
             return null;
         }
+
+        public bool updateAccount(long idAccount, AccountUpdateModel account)
+        {
+            if (account != null)
+            {
+                var tmp = _repo.GetById(idAccount);
+                if (tmp != null && tmp.Username.Equals(account.Username)){
+                    if (!tmp.Password.Equals(account.Password) && account.Password.Length != 0){
+                        tmp.Password = account.Password;
+                    }
+                    if (tmp.IdRole != account.IdRole && (account.IdRole>1 && account.IdRole <4)) {
+                        tmp.IdRole = account.IdRole;
+                    }
+                   
+                    if (!tmp.Name.Equals(account.Name) && account.Name.Length != 0)
+                    {
+                        tmp.Name = account.Name;
+                    }
+                    if (tmp.Status.Equals("active") && !account.isActive) {
+                        tmp.Status.Equals("lock");
+                    }
+                    _repo.Update(tmp);
+                    _unitOfWork.Commit();
+                    return true;
+                }
+            }
+            return false;
+        }
+
         private string generateJwtToken(Account account)
         {
             // generate token that is valid for 7 days

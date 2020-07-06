@@ -46,7 +46,7 @@ namespace Data.Infrastructures
             dbSet.Remove(entity);
         }
 
-        public virtual T GetById(int id)
+        public virtual T GetById(object id)
         {
             return dbSet.Find(id);
         }

@@ -1,4 +1,4 @@
-﻿using Data.EditModel;
+﻿using Data.RequestModel;
 using Data.Models;
 using PagedList.Core;
 using System;

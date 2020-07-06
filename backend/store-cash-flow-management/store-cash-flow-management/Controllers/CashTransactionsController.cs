@@ -9,7 +9,7 @@ using Services.IServices;
 namespace store_cash_flow_management.Controllers
 {
 
-    [Route("api/v1/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class CashTransactionsController : ControllerBase
     {
